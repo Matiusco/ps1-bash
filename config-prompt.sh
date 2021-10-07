@@ -41,6 +41,11 @@ if [ ! -f "$FILE_INSTALLED" ]; then
 	cp "${MY_SCRIPT}" "${FILE_INSTALLED}"
 fi
 
+# Permite chamar pelo apelido. 
+if ! command -v ps1-bash &> /dev/null ; then
+	alias ps1-bash="${FILE_INSTALLED}"
+fi
+
 # Diretório de backups sobre alterações. Histórico.
 DIR_PROMPT_BKP=$HOME/.prompt/BKP
 [ -d "$DIR_PROMPT_BKP" ] || mkdir -p "$DIR_PROMPT_BKP"
@@ -432,9 +437,6 @@ __altera_bashrc() {
 
 	cp  "${tmp_file}" "${MY_BASH_RC}"
 
-	#FILE_INSTALLED="${DIR_PROMPT_INSTALL}/${MY_SCRIPT}"
-	alias ps1-bash=${FILE_INSTALLED}
-
 	printf "${FILE_INSTALLED}\n"
 	# FIM FIM FIM 
 
@@ -669,6 +671,7 @@ fi
 __reset_terminal
 
 }
+
 	
 main "$@"
 
