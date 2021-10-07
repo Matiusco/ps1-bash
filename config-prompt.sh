@@ -37,6 +37,9 @@ DIR_PROMPT_INSTALL=$HOME/.prompt/ps1-bash
 
 # file installed
 FILE_INSTALLED="${DIR_PROMPT_INSTALL}/${MY_SCRIPT}"
+if [ ! -f "$FILE_INSTALLED" ]; then
+	cp "${MY_SCRIPT}" "${FILE_INSTALLED}"
+fi
 
 # Diretório de backups sobre alterações. Histórico.
 DIR_PROMPT_BKP=$HOME/.prompt/BKP
@@ -462,10 +465,10 @@ fi
 
 
 if [ $# -eq 0 ] && [ $CONFIGURANDO == "TRUE" ]; then 
-	echo "- Ajuda ? digite: ps1-bash -h "
+	echo "- Ajuda ? digite: $0 -h "
 	echo "- Escolha entre 1 a 8  "
    lista='1 2 3 4 5 6 7 8'
-   exemplo="Exemplo: ps1-bash ${RANDOM:0:1}" 
+   exemplo="Exemplo: $0 ${RANDOM:0:1}" 
 fi
 
 for i in $lista; do
