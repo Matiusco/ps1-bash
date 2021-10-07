@@ -16,7 +16,7 @@ Run ~/.ps1-bash/config-prompt.sh (it automatically backs up your  ~/.bashrc if y
 - Open your terminal
 - mkdir temp-dir 
 - cd temp-dir
-- wget https://github.com/Matiusco/ps1-bash/blob/main/config-prompt.sh 
+- wget -c https://raw.githubusercontent.com/Matiusco/ps1-bash/main/config-prompt.sh
 - chmod a+x config-prompt.sh 
 - Run ./config-prompt.sh
 
