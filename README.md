@@ -20,3 +20,4 @@ Run ~/.ps1-bash/config-prompt.sh (it automatically backs up your  ~/.bashrc if y
 - chmod a+x config-prompt.sh 
 - Run ./config-prompt.sh
 
+![ps1-bash-help](https://github.com/Matiusco/ps1-bash/blob/main/docs/ps1-bash-help.gif)
