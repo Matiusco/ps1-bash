@@ -1,4 +1,4 @@
-Modelo de Roadmpa para projetos. 
+Modelo de Roadmap para projetos. 
 
 # Roteiro público do ps1-bash
 
